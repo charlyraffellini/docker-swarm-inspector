@@ -1,0 +1,28 @@
+{
+  "name": "dockerrt",
+  "version": "1.0.0",
+  "description": "Nodejs app that retrieves request information",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charlyraffellini/swarmrt.git"
+  },
+  "keywords": [
+    "docker",
+    "nodejs",
+    "request"
+  ],
+  "author": "Charlie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charlyraffellini/swarmrt/issues"
+  },
+  "homepage": "https://github.com/charlyraffellini/swarmrt#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  }
+}
