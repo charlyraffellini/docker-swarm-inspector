@@ -16,5 +16,5 @@ after_success:
   - echo $VERSION
   - ls
   - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-  - docker build -f Dockerfile -t charlieraffellini/swarmrt:$VERSION -t charlieraffellini/swarmrt:latest .
-  - docker push charlieraffellini/swarmrt
+  - docker build -f Dockerfile -t charlieraffellini/inspector:$VERSION -t charlieraffellini/inspector:latest .
+  - docker push charlieraffellini/inspector
