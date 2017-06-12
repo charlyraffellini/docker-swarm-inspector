@@ -5,7 +5,8 @@ var bodyParser = require('body-parser');
 
 var app = express();
 
-var port = process.env.port || 3000;
+const LISTEN_HOSTNAME = process.env.LISTEN_HOSTNAME || '0.0.0.0';
+const LISTEN_PORT = process.env.LISTEN_PORT || '3000';
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -26,4 +27,7 @@ Remote Port: ${connection.remotePort}
 
 console.log('Listening on port ' + port);
 
-app.listen(port);
+
+app.listen(LISTEN_PORT, LISTEN_HOSTNAME, function () {
+    console.log(`Listening on ${LISTEN_HOSTNAME}:${LISTEN_PORT}`);
+});
