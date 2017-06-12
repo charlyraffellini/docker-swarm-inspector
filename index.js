@@ -25,9 +25,6 @@ Remote Port: ${connection.remotePort}
     res.send(message);
 });
 
-console.log('Listening on port ' + port);
-
-
 app.listen(LISTEN_PORT, LISTEN_HOSTNAME, function () {
     console.log(`Listening on ${LISTEN_HOSTNAME}:${LISTEN_PORT}`);
 });
