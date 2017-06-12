@@ -12,13 +12,16 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.get('/', function (req, res) {
     var name = req.query.name || '[Not defined]';
     var connection = req.connection;
-    res.send({
-	local_address: connection.localAddress,
-	local_port: connection.localPort,
-	remote_adress: connection.remoteAddress,
-	remote_port: connection.remotePort,
-	remote_family: connection.remoteFamily
-    });
+    res.status(200);
+    res.set('Content-Type', 'text/plain');
+    var message = `Request: ${req.headers.host}
+        Local Address: ${connection.localAddress}
+        Local Port: ${connection.localPort}
+        Remote Address: ${connection.remoteAddress}
+        Remote Family: ${connection.remoteFamily}
+        Remote Port: ${connection.remotePort}
+    `;
+     res.send(message);
 });
 
 console.log('Listening on port ' + port);
