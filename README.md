@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/charlyraffellini/swarmrt.svg?branch=master)](https://travis-ci.org/charlyraffellini/swarmrt)
+[![Build Status](https://travis-ci.org/charlyraffellini/docker-swarm-inspector.svg?branch=master)](https://travis-ci.org/charlyraffellini/docker-swarm-inspector)
 
-# swarmrt
+# docker-swarm-inspector
+
 Docker swarm request information retriever
