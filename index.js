@@ -25,6 +25,10 @@ Remote Port: ${connection.remotePort}
     res.send(message);
 });
 
+app.get('/crash', function (req, res) {
+    throw new Error("Fire!");
+}
+
 app.listen(LISTEN_PORT, LISTEN_HOSTNAME, function () {
     console.log(`Listening on ${LISTEN_HOSTNAME}:${LISTEN_PORT}`);
 });
