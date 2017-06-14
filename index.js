@@ -1,5 +1,3 @@
-'use strict';
-
 var express = require('express');
 var bodyParser = require('body-parser');
 
@@ -26,7 +24,7 @@ Remote Port: ${connection.remotePort}
 });
 
 app.get('/crash', function (req, res) {
-    throw new Error("Fire!");
+    process.exit(1);
 });
 
 app.listen(LISTEN_PORT, LISTEN_HOSTNAME, function () {
